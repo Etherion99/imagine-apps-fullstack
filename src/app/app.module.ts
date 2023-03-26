@@ -17,6 +17,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { AccordionModule } from 'primeng/accordion';
 
 
 
@@ -38,7 +39,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
     TabViewModule,
     InputTextModule,
     DropdownModule,
-    InputNumberModule
+    InputNumberModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
