@@ -1,6 +1,27 @@
 .header-link
-  text-decoration: none
-  color: black
+  display: table-cell
+  position: relative
+
+  & a
+    text-decoration: none
+    color: black
+    margin: 0 15px
+
+    &:after
+      content: ''
+      height: 2px
+      background: #000
+      display: block
+      position: absolute
+      transition: width 0.3s ease 0s, left 0.3s ease 0s
+      width: 0
+      left: 50%
+
+    &:hover:after
+      width: 85%
+      left: 7.5%
+
+
 
 #contact-button
   background-color: white
