@@ -1,0 +1,277 @@
+<div class="p-6" id="footer">
+  <div class="grid">
+    <div class="col-6 grid">
+      <div class="col">
+        <p style="font-family: 'Apercu Mono'; font-size: 14px; COLOR: #666666;">
+          EMPRESA
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Ubicaciones alrededor del mundo
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Misión
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Inclusión y diversidad
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Oportunidades de empleo
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Inversores
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Sala de redacción
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Blog
+          </a>
+        </p>
+      </div>
+      <div class="col">
+        <p style="font-family: 'Apercu Mono'; font-size: 14px; COLOR: #666666;">
+          COLABORACIONES
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Brokers
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Propietarios
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Reconiéndanos a alguien
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Planificadores de eventos
+          </a>
+        </p>
+      </div>
+      <div class="col">
+        <p style="font-family: 'Apercu Mono'; font-size: 14px; COLOR: #666666;">
+          SOPORTE
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Contacto
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Member Login
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Preguntas frecuentes
+          </a>
+        </p>
+        <p class="m-0">
+          <a class="link-2 line-28" href="">
+            Respuesta ante la COVID-19
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="col-4 col-offset-2">
+      <div class="grid justify-content-end" id="redes">
+        <a href="https://facebook.com/wework" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/wework" class="ml-6" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/wework" class="ml-6" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/wework" class="ml-6" target="_blank">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+      <div class="input-container col-8 col-offset-4 mt-5">
+        <span class="p-float-label">
+          <p-dropdown [options]="langs" class="w-full"></p-dropdown>
+          <label>Idioma</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <p-accordion class="w-full" [(activeIndex)]="activeAccordion">
+      <p-accordionTab [header]="activeAccordion === 0 ? 'Todas las ubicaciones ▴' : 'Todas las ubicaciones ▾'">
+        <p-tabView>
+          <p-tabPanel header="Ciudades">
+            <div class="grid">
+              <div class="col" *ngFor="let item of [0, 1, 2, 3, 4, 5]">
+                <p style="font-family: 'Apercu Mono'; font-size: 14px; COLOR: #666666;">
+                  ESTADOS UNIDOS
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+              </div>
+            </div>
+          </p-tabPanel>
+          <p-tabPanel header="Espacio de oficina">
+            <div class="grid">
+              <div class="col" *ngFor="let item of [0, 1, 2, 3]">
+                <p style="font-family: 'Apercu Mono'; font-size: 14px; COLOR: #666666;">
+                  ESTADOS UNIDOS
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+              </div>
+            </div>
+          </p-tabPanel>
+          <p-tabPanel header="Espacio de coworking">
+            <div class="grid">
+              <div class="col" *ngFor="let item of [0, 1, 2, 3]">
+                <p style="font-family: 'Apercu Mono'; font-size: 14px; COLOR: #666666;">
+                  ESTADOS UNIDOS
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+              </div>
+            </div>
+          </p-tabPanel>
+          <p-tabPanel header="Bienes raíces comerciales">
+            <div class="grid">
+              <div class="col" *ngFor="let item of [0, 1, 2, 3]">
+                <p style="font-family: 'Apercu Mono'; font-size: 14px; COLOR: #666666;">
+                  ESTADOS UNIDOS
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+              </div>
+            </div>
+          </p-tabPanel>
+          <p-tabPanel header="Salas de reuniones">
+            <div class="grid">
+              <div class="col" *ngFor="let item of [0, 1, 2, 3]">
+                <p style="font-family: 'Apercu Mono'; font-size: 14px; COLOR: #666666;">
+                  ESTADOS UNIDOS
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+                <p class="m-0">
+                  <a class="link-2 line-28" href="">
+                    prueba
+                  </a>
+                </p>
+              </div>
+            </div>
+          </p-tabPanel>
+        </p-tabView>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+  <div class="grid">
+    <div class="col-2">
+      <p style="line-height: 24px;">
+        <a href="tel:+5715087567" class="link-2" style="color: blue;">+5715087567</a><br>
+        WeWork Companies LLC<br>
+        75 Rockefeller Plaza<br>
+        Floor 10<br>
+        New York, New York 10019<br>
+      </p>
+    </div>
+    <div class="col-8 col-offset-2 grid align-items-center">
+      <div class="col">
+        <div class="text-right">
+          <a href="https://www.wework.com/es-LA/legal/privacy" class="link-2 mr-3" style="color: blue;">Privacidad</a>
+          <a href="https://www.wework.com/es-LA/legal/terms-of-service" class="link-2 mr-3" style="color: blue;">Términos</a>
+          <a href="https://www.wework.com/es-LA/legal/cookie-policy" class="link-2 mr-3" style="color: blue;">Política de cookies</a>
+          <a href="" class="link-2 mr-3" style="color: blue;">Cookies Settings</a>
+          <a href="https://www.wework.com/es-LA/legal/accessibility" class="link-2 mr-3" style="color: blue;">Accesibilidad</a>
+          <a href="https://www.wework.com/es-LA/sitemap" class="link-2 mr-3" style="color: blue;">Mapa del sitio</a>
+        </div>
+        <div>
+          <p class="text-right">
+            Copyright © 2023 WeWork. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+      <div class="ml-4">
+        <p-image width="80%" src="../../../../assets/logo.svg"></p-image>
+      </div>      
+    </div>
+  </div>
+</div>
