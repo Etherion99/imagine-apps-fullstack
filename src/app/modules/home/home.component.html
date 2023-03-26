@@ -1,0 +1,305 @@
+<app-header></app-header>
+<div class="px-8 mx-5">
+  <div class="grid">
+    <div id="search">
+      <div class="p-3">
+        <p class="m-0 text-5xl mb-5"><strong>Para todas tus formas de trabajo, estamos aquí</strong></p>
+        <p class="text-base">Encuentra una ubicación cerca de ti. Explora las membresías y las oficinas listas para mudarse para particulares o empresas de todos los tamaños.</p>
+        <div class="city-select my-5">
+          <div class="city-select-icon">
+            <svg width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+              <title>marcador</title>
+              <path d="M6 16S0 9.312 0 6a6 6 0 0 1 12 0c0 3.313-6 10-6 10zM6 1a5 5 0 0 0-5 5c0 2.761 5 8.499 5 8.499S11 8.761 11 6a5 5 0 0 0-5-5zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-5a2 2 0 1 0 0 4 2 2 0 0 0 0-4z">
+              </path>
+            </svg>
+          </div>
+          <label>
+            Encuentra espacio de trabajo en
+          </label>
+          <select>
+              <optgroup label="Colombia">
+                  <option value="237b0dce-80a2-11e8-b48c-1202be33576a" data-market-path="/l/barranquilla">Barranquilla</option>
+                  <option value="4b99cd17-b915-45cd-9271-2e5ca3c66d0c" data-market-path="/l/bogota" selected>Bogotá</option>
+                  <option value="ace2d770-584f-11e8-9099-1202be33576a" data-market-path="/l/medellin">Medellín</option>
+              </optgroup>
+              <optgroup label="Costa Rica">
+                  <option value="a89d5444-4429-11e9-ab2d-0ec6db7d2a3c" data-market-path="/l/san-jose--costa-rica">San José</option>
+              </optgroup>
+              <optgroup label="México">
+                  <option value="fa462f4c-06d0-11e8-b15d-1202be33576a" data-market-path="/l/guadalajara">Guadalajara</option>
+                  <option value="6a2a28d4-4960-440f-af75-aa52c2d4e9bc" data-market-path="/l/mexico-city--DIF">Ciudad de México</option>
+                  <option value="1ba68dd4-0b69-11e8-b8c8-1202be33576a" data-market-path="/l/monterrey">Monterrey</option>
+              </optgroup>            
+          </select>
+        </div>
+        <button id="search-btn">Comenzar</button>
+      </div>
+    </div>
+    <div id="carousel">
+      <p-carousel [value]="carouselItems" [numVisible]="1" [circular]="true">
+        <ng-template let-item pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="mb-3">
+                        <img src="../../../assets/home-carousel/item-{{ item }}.jpg" alt="wework" class="product-image" />
+                    </div>                
+                </div>
+            </div>
+        </ng-template>
+      </p-carousel>
+    </div>  
+  </div>
+  <div class="grid mt-5">
+    <p class="col" id="text-1">¿Qué estás buscando?</p>
+    <a class="mr-2 mt-5" routerLink="/solutions" id="link-1">Ver todas las soluciones →</a>
+  </div>
+  <div class="grid align-items-center mt-3 mb-5" id="home-cards">
+    <div class="col-3 home-card-container" *ngFor="let card of cards">
+      <div class="home-card grid">
+        <div class="img flex align-items-center">
+          <img src="{{ card.link }}">
+        </div>
+        <div class="col ml-2 description">
+          <div class="title">Membresía de coworking</div>
+          <div class="subtitle mt-2">Hot desks, salas, cabinas telefónicas y más</div>
+          <div class="capacity mt-2 p-1">
+            <img class="mr-2" src="https://ctfassets.imgix.net/vh7r69kgcki3/567C6OmlkdbvCVs92HZn5C/02b7284f201f369847af08665c89ba76/capacity.svg?auto=format%20compress&amp;fit=crop&amp;q=50&amp;w=15&amp;h=15">
+            {{ card.capacity }}
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+  <div class="grid mt-8">
+    <div class="col-6">
+      <p-image width="100%" src="https://ctfassets.imgix.net/vh7r69kgcki3/QGZypVuPUMCRIaXaQ3mOM/84ce490cd89ea03927e546bc5ccb1c49/Web_150DPI-20210825_WeWork_-_5_Temasek_Blvd_-_Suntec_Tower_S_-_Singapore_010.jpg?auto=format%20compress&fit=crop&q=50&w=500px"></p-image>
+    </div>
+    <div class="col pl-6">
+      <p>
+        <span class="yellow-label">PRECIO INICIAL</span>
+      </p>
+      <p style="font-size: 32px; font-weight: bold; line-height: 44px;">
+        Obtén un 25 % de descuento en el plan WeWork All Access Plus con esta oferta especial
+      </p>
+      <p style="line-height: 28px;">
+        Accede a espacios de trabajo cerca de ti con un descuento del 25 % en la cuota del plan de membresía mensual Plus de WeWork All Access durante 5 meses. Se aplican términos y condiciones.
+      </p>
+      <a class="mt-5" routerLink="/solutions/wework-all-access" id="link-1">Obtén más información →</a>
+    </div>
+  </div>
+  <div class="grid my-5 relative" style="height: 40rem;">
+    <svg class="product-features__wave" viewBox="0 0 500 150" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color: #f7f7f7 ;stop-opacity:1"></stop>
+          <stop offset="80%" style="stop-color: #fff ;stop-opacity:1"></stop>
+          <stop offset="100%" style="stop-color:#fff ;stop-opacity:1"></stop>
+        </linearGradient>
+      </defs>
+      <path d="M-13.82,25.16 C375.00,74.50 498.59,-50.81 518.90,205.75 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;" fill="url(#grad2)"></path>
+    </svg>
+    <div class="absolute grid mt-5 w-full top-0 left-0">
+      <div class="col-8 p-8">
+        <div class="px-8">
+          <p class="text-32 font-bold text-justify">Soluciones para empresas de todos los tamaños</p>
+          <p-tabView [(activeIndex)]="activeTab">
+            <p-tabPanel header="Para particulares/equipos pequeños">
+                <p>
+                  Membresías flexibles y oficinas llave en mano que se adaptan a todos los presupuestos y estrategias híbridas. Encuentra espacio para concentrarte y colaborar en cientos de ubicaciones cerca de tu casa o en diferentes partes del mundo.
+                </p>
+                <a class="mt-5" routerLink="/whywework" id="link-1">Obtén más información →</a>
+            </p-tabPanel>
+            <p-tabPanel header="Para empresas medianas/grandes">
+                <p>
+                  Impulsa tu estrategia híbrida, mejora la experiencia de los empleados y ahorra en costos inmobiliarios combinando oficinas privadas, metodologías de coworking y soluciones de software. 
+                </p>
+                <a class="mt-5" routerLink="/flexibility" id="link-1">Obtén más información →</a>
+            </p-tabPanel>
+          </p-tabView>
+        </div>
+      </div>
+      <div class="col-4">
+        <p-image *ngIf="activeTab === 0" class="img-1" width="100%" src="https://ctfassets.imgix.net/vh7r69kgcki3/3JmE8nqDzhWqtltmCZxk9s/6f1486080c47f60696fc2ff5bc3b12bf/Web_150DPI-20221216_WeWork_Product_Shoot_Q4_15.jpg?auto=format%20compress&fit=crop&q=50&w=1000&h=1333"></p-image>
+        <p-image *ngIf="activeTab === 1" class="img-1" width="100%" src="https://ctfassets.imgix.net/vh7r69kgcki3/26TzoOG2rJL8pR7WngRghr/b8c2ea28d805ab00a2e331e5705f5100/Web_150DPI-Andrea_Calo_609Main_17856__1_.jpg?auto=format%20compress&fit=crop&q=50&w=1000&h=1333"></p-image>
+      </div>
+    </div>
+  </div>
+  <div class="flex" style="margin-bottom: 15rem; height: 35rem; background-repeat: no-repeat; background-size: cover; background-image: url('https://ctfassets.imgix.net/vh7r69kgcki3/3xm70BLNewYg0oQ0uqACIq/ea3bdb8af2c9eac51de863d15f493618/Web_72DPI-VIR_TYS_COF_OFFICE.jpg?auto=format%20compress&fit=crop&q=50&w=1000&h=563');">
+    <div style="background-color: white;" class="px-7 pt-3 col-8 col-offset-2 mt-8" [formGroup]="contactForm">
+      <p class="text-32 font-bold">Te ayudamos a encontrar tu espacio de trabajo ideal</p>
+      <p>Completa el formulario y un miembro del equipo de WeWork se pondrá en contacto contigo a la brevedad.</p>
+      <div class="grid mt-5">
+        <div class="col">
+          <div class="input-container">
+            <span class="p-float-label">
+              <input pInputText class="w-full" placeholder="Tu nombre completo" formControlName="name"/>
+              <label [ngClass]="{'error-msg': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}">Nombre completo *</label>
+            </span>
+          </div>
+          <span *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error-msg text-12 ml-3">Ingresa tu nombre completo</span>      
+        </div>
+        <div class="col">
+          <div class="input-container">
+            <span class="p-float-label">
+              <input pInputText class="w-full" placeholder="Tu nombre completo" formControlName="email"/>
+              <label [ngClass]="{'error-msg': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}">Correo electrónico *</label>
+            </span>
+          </div>
+          <span *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-msg text-12 ml-3">Ingresa tu dirección de correo electrónico</span>      
+        </div>
+      </div>
+      <div class="grid mt-3">
+        <div class="col">
+          <div class="input-container">
+            <span class="p-float-label">
+              <input pInputText class="w-full" placeholder="Nombre de la empresa" formControlName="company"/>
+              <label [ngClass]="{'error-msg': contactForm.get('company')?.invalid && contactForm.get('company')?.touched}">Nombre de la empresa *</label>
+            </span>
+          </div>
+          <span *ngIf="contactForm.get('company')?.invalid && contactForm.get('company')?.touched" class="error-msg text-12 ml-3">¿para quién trabajas?</span>      
+        </div>
+        <div class="col">
+          <div class="input-container">
+            <span class="p-float-label">
+              <input pInputText class="w-full" placeholder="Tu nombre completo" formControlName="phone" />
+              <label [ngClass]="{'error-msg': contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched}">Número de teléfono *</label>
+            </span>
+          </div>
+          <span *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="error-msg text-12 ml-3">Compártenos tus datos para que podamos comunicarnos contigo</span>      
+        </div>
+      </div>
+      <div class="grid mt-3">
+        <div class="col">
+          <div class="input-container">
+            <span class="p-float-label">
+              <p-dropdown [options]="cities" class="w-full" formControlName="city"></p-dropdown>
+              <label [ngClass]="{'error-msg': contactForm.get('city')?.invalid && contactForm.get('city')?.touched}">Ubicación *</label>
+            </span>
+          </div>
+          <span *ngIf="contactForm.get('city')?.invalid && contactForm.get('city')?.touched" class="error-msg text-12 ml-3">¿para quién trabajas?</span>      
+        </div>
+        <div class="col">
+          <div class="input-container">
+            <span class="p-float-label">
+              <input pInputText class="w-full" placeholder="¿Cuántas personas necesitan un espacio de trabajo?" formControlName="people"/>
+              <label [ngClass]="{'error-msg': contactForm.get('people')?.invalid && contactForm.get('people')?.touched}">¿Cuántas personas necesitan un espacio de trabajo? *</label>
+            </span>
+          </div>
+          <span *ngIf="contactForm.get('people')?.invalid && contactForm.get('people')?.touched" class="error-msg text-12 ml-3">¿Cuántas personas necesitan un espacio de trabajo?</span>      
+        </div>
+      </div>
+      <p>
+        Al hacer clic en el botón a continuación, aceptas nuestras <a routerLink="/legal/terms-of-service" id="link-1">Condiciones de servicio</a> y nuestra <a routerLink="/legal/privacy" id="link-1">Política de privacidad global</a>.
+      </p>
+      <button id="blue-btn">Enviar</button>
+    </div>
+  </div>
+</div>
+
+<div class="grid p-6" style="background-color: #f7f7f7;">
+  <div class="col-4">
+    <span style="font-family: 'Apercu Mono';">RED GLOBAL</span>
+    <P class="text-32 line-44 font-bold">
+      Espacio de trabajo dónde y cuándo lo necesites
+    </P>
+    <p class="line-28 mb-5">
+      Con más de 700 ubicaciones en todo el mundo, los equipos pueden trabajar mejor en más lugares, ya sea cerca de casa, en múltiples espacios de trabajo o en una oficina central.
+    </p>
+    <a routerLink="/locations" id="link-1">Eplora las ubicaciones →</a>
+  </div>
+  <div class="col-7 col-offset-1">
+    <p-image width="100%" src="https://ctfassets.imgix.net/vh7r69kgcki3/5zgqBvLQ7hx0Pr7Ld6z0Uo/cee7093a699e20d6c39c38c72877e623/Web_150DPI-ww-locations-map_April-2019__1_-01.jpg?auto=format%20compress&fit=crop&q=50&w=1000&h=563"></p-image>
+  </div>
+</div>
+
+<div class="p-6">
+  <p class="text-32 line-44 font-bold">
+    Empoderamos al mundo del mañana en el trabajo
+  </p>
+  <p class="col-8" style="font-size: 20px; line-height: 32px;">
+    Durante más de una década, hemos liderado el futuro del trabajo flexible. Desde trabajadores independientes hasta empresas Fortune 500, estamos ayudando a nuestros miembros a reimaginar la forma en que trabajan.
+  </p>
+  <div class="grid gap-4">
+    <div class="col logo-container px-4 py-3 flex align-items-center justify-content-center" *ngFor="let logo of logos">
+      <p-image width="100%" src="{{ logo }}"></p-image>
+    </div>
+  </div>
+</div>
+
+<div class="p-6">
+  <p style="font-family: 'Apercu Mono';">
+    IDEAS BY WEWORK
+  </p>
+  <div class="grid">
+    <p class="text-32 font-bold col mt-0">
+      Tendencias y perspectivas de los espacios de trabajo
+    </p>
+    <a routerLink="/ideas" id="link-1" style="white-space: nowrap;">Sigue leyendo →</a>
+  </div>
+  <div class="grid align-items-center">
+    <div class="col-6">
+      <p-image width="100%" src="https://ctfassets.imgix.net/vh7r69kgcki3/5UOT0oT5krYm9t37ixk9zy/548775ae2e1430481ca24cf38204cfaa/Web_72DPI-20200313_WeWork_Salesforce-Tower-Atrium-San-Francisco_001.jpg?auto=compress&fit=crop&q=50&fm=jpeg&w=1000&h=563"></p-image>
+    </div>
+    <div class="col-5 pl-4 relative">
+      <p style="font-family: 'Apercu Mono';" class="text-12 relative">
+        <span class="mono-title">Estudios de investigación</span>
+      </p>
+      <a class="link-2 text-32 font-bold line-44" style="color: black;" href="https://www.wework.com/es-LA/ideas/research-insights/flexible-office-is-a-powerful-part-of-workplace-strategy-gated">
+        La importancia de los espacios de oficina flexibles
+      </a><br><br>
+      <a class="line-28 link-2" href="https://www.wework.com/es-LA/ideas/research-insights/flexible-office-is-a-powerful-part-of-workplace-strategy-gated">
+        Una encuesta de Cushman & Wakefield revela que las oficinas flexibles son un componente importante del ecosistema del espacio de trabajo.
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr class="mx-5">
+
+<div class="grid gap-3 mt-3 px-5">
+  <div class="col">
+    <p-image width="100%" src="https://ctfassets.imgix.net/vh7r69kgcki3/fmB4E8GeWAFzlAAwH7YJe/74d1c7ec6f88513f6cfe431b6c0ca211/WeWork_The-Wilson_7272-Wisconsin-Ave_Bethesda_4_header-scaled.jpg?auto=compress&fit=crop&q=50&fm=jpeg&w=1000&h=563"></p-image>
+    <p class="relative">
+      <span class="mono-title">PRODUCTOS FLEXIBLES</span>
+    </p>
+    <a class="font-bold line-28 link-2" style="font-size: 20px;" href="https://www.wework.com/es-LA/ideas/workspace-solutions/flexible-products/a-cutting-edge-workspace-near-washington-d-c">
+      Un espacio de trabajo de vanguardia cerca de Washington, D. C.
+    </a><br><br>
+    <a class="link-2 line-28" href="https://www.wework.com/es-LA/ideas/workspace-solutions/flexible-products/a-cutting-edge-workspace-near-washington-d-c" class="link-2">
+      WeWork The Wilson está diseñado a medida para su comunidad local
+    </a>
+  </div>
+  <div class="col">
+    <p-image width="100%" src="https://ctfassets.imgix.net/vh7r69kgcki3/2lbHRv6oDxMnWDsuIPpd4Y/3fcc904abd7e9fcce1adb7a74bb71a9c/ElephantSkin_Miami_WeWork02_v1-800x450.jpg?auto=compress&fit=crop&q=50&fm=jpeg&w=1000&h=563"></p-image>
+    <p class="relative">
+      <span class="mono-title">CASE STUDIES</span>
+    </p>
+    <a class="font-bold line-28 link-2" style="font-size: 20px;" href="https://www.wework.com/es-LA/ideas/workspace-solutions/flexible-products/a-cutting-edge-workspace-near-washington-d-c">
+      How one remote creative agency went global, fast
+    </a><br><br>
+    <a class="link-2 line-28" href="https://www.wework.com/es-LA/ideas/workspace-solutions/flexible-products/a-cutting-edge-workspace-near-washington-d-c" class="link-2">
+      Elephant Skin embraced remote work and office space at WeWork to create a global business
+    </a>
+  </div>
+  <div class="col">
+    <p-image width="100%" src="https://ctfassets.imgix.net/vh7r69kgcki3/4GkcQ3suRb1BFE94sKlW4c/8a323151d003ffa6cdc6c4db73307007/ATLAS_9385_EDIT_v1-1536x864.jpg?auto=compress&fit=crop&q=50&fm=jpeg&w=1000&h=563"></p-image>
+    <p class="relative">
+      <span class="mono-title">CASOS PRÁCTICOS</span>
+    </p>
+    <a class="font-bold line-28 link-2" style="font-size: 20px;" href="https://www.wework.com/es-LA/ideas/workspace-solutions/flexible-products/a-cutting-edge-workspace-near-washington-d-c">
+      Cómo cuatro fundadores usan WeWork All Access
+    </a><br><br>
+    <a class="link-2 line-28" href="https://www.wework.com/es-LA/ideas/workspace-solutions/flexible-products/a-cutting-edge-workspace-near-washington-d-c" class="link-2">
+      Para estos fundadores, el espacio de trabajo ayuda a expandir su empresa y su cultura.
+    </a>
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+<a href="https://wa.me/573174265229?text=Hola" target="_blank" id="whatsapp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#FFFFFF">
+    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+  </svg>
+</a>
+
